@@ -1,0 +1,26 @@
+<header class="antet">
+  <div class="antet__interior">
+    <a class="sigla" href="/" aria-label="{{ site.nume }}, pagina principală">
+      <img src="/assets/imagini/logo.svg" alt="" width="44" height="44">
+      <span class="sigla__text">
+        <span class="sigla__nume">{{ site.nume }}</span>
+        <span class="sigla__rol">{{ site.titluScurt }}</span>
+      </span>
+    </a>
+
+    <button class="meniu-buton" type="button" aria-expanded="false" aria-controls="meniu">
+      <span class="meniu-buton__linii" aria-hidden="true"></span>
+      <span class="meniu-buton__text">Meniu</span>
+    </button>
+
+    <nav class="meniu" id="meniu" aria-label="Meniu principal">
+      <ul>
+        {%- for item in meniu %}
+        {%- set activ = (page.url == item.url) or (item.url != "/" and page.url.startsWith(item.url)) %}
+        <li><a href="{{ item.url }}"{% if activ %} aria-current="page"{% endif %}>{{ item.text }}</a></li>
+        {%- endfor %}
+      </ul>
+      <a class="buton buton--mic" href="/contact/">{{ site.butonProgramare }}</a>
+    </nav>
+  </div>
+</header>

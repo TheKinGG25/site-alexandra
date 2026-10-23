@@ -1,0 +1,39 @@
+{
+  "discutieGratuita": {
+    "titlu": "Discuție inițială",
+    "detalii": "15 minute, la telefon",
+    "pret": "Gratuită"
+  },
+  "sedinte": [
+    {
+      "titlu": "Ședință în cabinet",
+      "detalii": "50 de minute",
+      "pret": 280
+    },
+    {
+      "titlu": "Pachet de 5 ședințe în cabinet",
+      "detalii": "260 lei pe ședință",
+      "pret": 1300
+    },
+    {
+      "titlu": "Ședință online",
+      "detalii": "50 de minute",
+      "pret": 230
+    },
+    {
+      "titlu": "Pachet de 5 ședințe online",
+      "detalii": "210 lei pe ședință",
+      "pret": 1050
+    }
+  ],
+  "cupluFamilie": {
+    "titlu": "Ședință de cuplu sau de familie",
+    "detalii": "80 de minute",
+    "pret": "Tariful se stabilește la prima discuție"
+  },
+  "reguli": [
+    "Plata se face la finalul ședinței, numerar sau prin transfer bancar.",
+    "Pachetele de 5 ședințe se achită în avans și nu au termen de valabilitate.",
+    "O ședință se poate anula sau reprograma cu cel puțin 24 de ore înainte. Altfel, ședința se achită integral."
+  ]
+}

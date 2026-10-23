@@ -1,0 +1,36 @@
+---
+layout: layouts/base.njk
+title: "Articole"
+description: "Articole despre anxietate, emoții, relații, pierderi și adolescență, scrise de Alexandra Pisaru, psiholog clinician și psihoterapeut."
+permalink: /articole/
+---
+<section class="antet-pagina sectiune--centrat">
+  <div class="interior--text">
+    <p class="eticheta">Articole</p>
+    <h1>Gânduri despre emoții, relații și schimbare</h1>
+    <p class="intro">Texte scurte, pentru momentele în care vrei să înțelegi mai bine ce trăiești.</p>
+  </div>
+</section>
+
+<section class="sectiune sectiune--fara-sus">
+  <div class="interior">
+    {%- set categorii = collections.articole | categoriiUnice %}
+    {%- if collections.articole.length %}
+    {%- if categorii.length > 1 %}
+    <div class="filtre" role="group" aria-label="Filtrează după categorie" hidden>
+      <button type="button" data-filtru="toate" aria-pressed="true">Toate</button>
+      {%- for c in categorii %}
+      <button type="button" data-filtru="{{ c }}" aria-pressed="false">{{ c }}</button>
+      {%- endfor %}
+    </div>
+    {%- endif %}
+    <div class="grila-carduri grila-carduri--articole">
+      {%- for a in collections.articole %}
+      {% include "partials/card-articol.njk" %}
+      {%- endfor %}
+    </div>
+    {%- else %}
+    <p class="sectiune--centrat">Primele articole apar în curând.</p>
+    {%- endif %}
+  </div>
+</section>

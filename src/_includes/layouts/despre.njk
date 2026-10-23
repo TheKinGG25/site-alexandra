@@ -1,0 +1,38 @@
+---
+layout: layouts/base.njk
+---
+<section class="antet-pagina">
+  <div class="interior despre__grila">
+    <div class="despre__foto">
+      <figure>
+        <img class="foto" src="/assets/imagini/alexandra-pisaru.jpg" alt="Alexandra Pisaru" width="800" height="1000" fetchpriority="high">
+      </figure>
+    </div>
+    <div>
+      <p class="eticheta">Despre mine</p>
+      <h1>{{ salut }}</h1>
+      <p class="intro">{{ site.titlu }}.</p>
+      <div class="text-lung">
+        {{ content | safe }}
+      </div>
+
+      <h2 class="titlu-formare">Formare</h2>
+      <ul class="lista-formare">
+        {%- for f in formare.lista %}
+        <li><strong>{{ f.titlu }}</strong>{% if f.detalii %}{{ f.detalii }}{% endif %}</li>
+        {%- endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sectiune sectiune--banda sectiune--centrat" aria-labelledby="valori">
+  <div class="interior--text">
+    <h2 id="valori">Ce contează pentru mine</h2>
+    <ul class="valori">
+      {%- for v in formare.valori %}<li>{{ v }}</li>{% endfor %}
+    </ul>
+  </div>
+</section>
+
+{% include "partials/final-contact.njk" %}

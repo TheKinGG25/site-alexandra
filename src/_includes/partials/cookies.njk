@@ -1,0 +1,12 @@
+{%- if site.googleAnalyticsId %}
+<div class="cookies" id="cookies" role="dialog" aria-live="polite" aria-labelledby="cookies-titlu" data-ga="{{ site.googleAnalyticsId }}" hidden>
+  <div class="cookies__interior">
+    <p class="cookies__titlu" id="cookies-titlu">Îți respect intimitatea</p>
+    <p>Aș vrea să folosesc Google Analytics ca să văd, anonim, câți oameni vizitează site-ul și ce pagini citesc. Statisticile pornesc doar dacă ești de acord. Poți schimba oricând alegerea din subsolul paginii. <a href="/cookie-uri/">Detalii</a></p>
+    <div class="cookies__butoane">
+      <button type="button" class="buton buton--mic" data-cookies="accept">Accept</button>
+      <button type="button" class="buton buton--mic buton--secundar" data-cookies="refuz">Refuz</button>
+    </div>
+  </div>
+</div>
+{%- endif %}

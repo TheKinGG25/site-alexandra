@@ -1,0 +1,109 @@
+---
+layout: layouts/base.njk
+titluSeo: "Alexandra Pisaru | Psiholog clinician și psihoterapeut în București"
+description: "Psihoterapie pentru adulți, adolescenți, cupluri și familii, în cabinet lângă Piața Victoriei, București, și online. Prima discuție, de 15 minute, este gratuită."
+---
+{%- from "partials/icoane.njk" import icoana -%}
+
+<section class="hero">
+  <div class="interior hero__grila">
+    <div>
+      <p class="eticheta">{{ site.titluScurt }}</p>
+      <h1>{{ acasa.titlu }}</h1>
+      <p class="intro">{{ acasa.subtitlu }}</p>
+      <div class="grup-butoane">
+        <a class="buton" href="/contact/">{{ site.butonProgramare }}</a>
+        <a class="buton buton--secundar" href="/despre-mine/">Despre mine</a>
+      </div>
+    </div>
+    <figure class="hero__foto">
+      <img src="/assets/imagini/alexandra-pisaru.jpg" alt="Alexandra Pisaru, psiholog clinician și psihoterapeut" width="800" height="1000" fetchpriority="high">
+    </figure>
+  </div>
+</section>
+
+<section class="sectiune sectiune--banda" aria-label="Pe scurt">
+  <div class="interior">
+    <ul class="repere">
+      {%- for r in acasa.repere %}
+      <li><strong>{{ r.titlu }}</strong><span>{{ r.text }}</span></li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="sectiune" aria-labelledby="regasesti">
+  <div class="interior">
+    <div class="sectiune--centrat">
+      <h2 id="regasesti">{{ acasa.regasesti.titlu }}</h2>
+      <p class="intro">{{ acasa.regasesti.intro }}</p>
+    </div>
+    <div class="doua-coloane">
+      <div class="card">
+        <h3>{{ acasa.regasesti.acum.titlu }}</h3>
+        <ul class="lista-puncte">
+          {%- for p in acasa.regasesti.acum.puncte %}<li>{{ p }}</li>{% endfor %}
+        </ul>
+      </div>
+      <div class="card card--pal">
+        <h3>{{ acasa.regasesti.terapia.titlu }}</h3>
+        <ul class="lista-puncte lista-puncte--plin">
+          {%- for p in acasa.regasesti.terapia.puncte %}<li>{{ p }}</li>{% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+{%- if site.citat %}
+<section class="sectiune sectiune--banda" aria-label="Citat">
+  <div class="interior">
+    <blockquote class="citat">
+      <svg class="citat__semn" viewBox="0 0 40 30" fill="currentColor" aria-hidden="true"><path d="M0 30V17C0 7 5 1.5 14 0l1.5 4C10 5.5 7.5 9 7.5 13H15v17H0zm22 0V17c0-10 5-15.5 14-17l1.5 4C32 5.5 29.5 9 29.5 13H37v17H22z"/></svg>
+      <p>{{ site.citat }}</p>
+      <footer>{{ site.nume }}</footer>
+    </blockquote>
+  </div>
+</section>
+{%- endif %}
+
+<section class="sectiune" aria-labelledby="servicii">
+  <div class="interior">
+    <div class="sectiune--centrat">
+      <p class="eticheta">Servicii</p>
+      <h2 id="servicii">{{ acasa.servicii.titlu }}</h2>
+      <p class="intro">{{ acasa.servicii.intro }}</p>
+    </div>
+    <div class="grila-carduri">
+      {%- set icoaneServicii = ["persoana", "cuplu", "frunza"] %}
+      {%- for s in servicii.lista %}
+      <article class="card card-serviciu">
+        {{ icoana(icoaneServicii[loop.index0] or "frunza") | safe }}
+        <h3>{{ s.titlu }}</h3>
+        <p>{{ s.scurt }}</p>
+      </article>
+      {%- endfor %}
+    </div>
+    <p class="centrat-jos"><a class="link-sageata" href="/servicii/">Vezi serviciile, temele și tarifele</a></p>
+  </div>
+</section>
+
+{%- if collections.articole.length %}
+<section class="sectiune sectiune--banda" aria-labelledby="articole">
+  <div class="interior">
+    <div class="sectiune--centrat">
+      <p class="eticheta">Articole</p>
+      <h2 id="articole">{{ acasa.articole.titlu }}</h2>
+      <p class="intro">{{ acasa.articole.intro }}</p>
+    </div>
+    <div class="grila-carduri grila-carduri--articole">
+      {%- for a in collections.articole | limita(3) %}
+      {% include "partials/card-articol.njk" %}
+      {%- endfor %}
+    </div>
+    <p class="centrat-jos"><a class="link-sageata" href="/articole/">Toate articolele</a></p>
+  </div>
+</section>
+{%- endif %}
+
+{% include "partials/final-contact.njk" %}

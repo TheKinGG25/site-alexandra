@@ -1,0 +1,7 @@
+[
+  { "text": "Acasă", "url": "/" },
+  { "text": "Despre mine", "url": "/despre-mine/" },
+  { "text": "Servicii", "url": "/servicii/" },
+  { "text": "Articole", "url": "/articole/" },
+  { "text": "Contact", "url": "/contact/" }
+]

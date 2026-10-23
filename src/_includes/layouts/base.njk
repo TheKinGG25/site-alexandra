@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>document.documentElement.classList.add("js")</script>
+  {%- set titluPagina = titluSeo or ((title + " | " + site.nume) if title else (site.nume + " | " + site.titluScurt)) %}
+  {%- set urlPagina = page.url | absolut(site.url) %}
+  {%- set imaginePagina = (imagine or "/assets/imagini/previzualizare.png") | absolut(site.url) %}
+  <title>{{ titluPagina }}</title>
+  <meta name="description" content="{{ description }}">
+  <link rel="canonical" href="{{ urlPagina }}">
+  {%- if faraIndex %}<meta name="robots" content="noindex">{% endif %}
+
+  <meta property="og:type" content="{{ 'article' if esteArticol else 'website' }}">
+  <meta property="og:locale" content="ro_RO">
+  <meta property="og:site_name" content="{{ site.nume }}">
+  <meta property="og:title" content="{{ title or site.nume }}">
+  <meta property="og:description" content="{{ description }}">
+  <meta property="og:url" content="{{ urlPagina }}">
+  <meta property="og:image" content="{{ imaginePagina }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <meta name="theme-color" content="#FFFDF7">
+  <link rel="icon" href="/assets/imagini/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/imagini/apple-touch-icon.png">
+  <link rel="preload" href="/assets/fonts/wix-madefor-text-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/wix-madefor-display-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  {% include "partials/date-structurate.njk" %}
+</head>
+<body>
+  <a class="sari" href="#continut">Sari la conținut</a>
+
+  {% include "partials/antet.njk" %}
+
+  <main id="continut">
+    {{ content | safe }}
+  </main>
+
+  {% include "partials/subsol.njk" %}
+  {% include "partials/cookies.njk" %}
+
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<footer class="subsol">
+  <div class="subsol__interior">
+    <div class="subsol__col">
+      <a class="sigla sigla--subsol" href="/">
+        <img src="/assets/imagini/logo.svg" alt="" width="40" height="40">
+        <span class="sigla__nume">{{ site.nume }}</span>
+      </a>
+      <p>{{ site.titlu }}</p>
+      <p class="subsol__mic">Cod RUP {{ site.codRup }}. {{ site.atestat }}.</p>
+    </div>
+
+    <div class="subsol__col">
+      <h2 class="subsol__titlu">Contact</h2>
+      <ul class="subsol__lista">
+        <li><a href="tel:{{ site.telefonLink }}">{{ site.telefon }}</a></li>
+        <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+        <li><a href="https://wa.me/{{ site.whatsapp }}" rel="noopener">WhatsApp</a></li>
+        <li>{{ site.adresa }}</li>
+        <li>{{ site.program }}</li>
+      </ul>
+    </div>
+
+    <div class="subsol__col">
+      <h2 class="subsol__titlu">Pagini</h2>
+      <ul class="subsol__lista">
+        {%- for item in meniu %}
+        <li><a href="{{ item.url }}">{{ item.text }}</a></li>
+        {%- endfor %}
+        <li><a href="{{ site.linkedin }}" rel="noopener">LinkedIn</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="subsol__jos">
+    <p>&copy; {% anCurent %} {{ site.operator }}</p>
+    <ul class="subsol__legal">
+      <li><a href="/protectia-datelor/">Protecția datelor</a></li>
+      <li><a href="/cookie-uri/">Politica de cookie-uri</a></li>
+      {%- if site.googleAnalyticsId %}
+      <li><button type="button" class="link-buton" data-setari-cookies>Setări cookie-uri</button></li>
+      {%- endif %}
+    </ul>
+  </div>
+</footer>

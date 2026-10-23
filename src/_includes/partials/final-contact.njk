@@ -1,0 +1,14 @@
+<section class="sectiune sectiune--centrat final" aria-labelledby="final-titlu">
+  <div class="interior--text">
+    <h2 id="final-titlu">{{ acasa.final.titlu }}</h2>
+    <p class="intro">{{ acasa.final.text }}</p>
+    <div class="grup-butoane">
+      <a class="buton" href="/contact/">{{ site.butonProgramare }}</a>
+    </div>
+    <ul class="contact-rapid">
+      <li><a href="tel:{{ site.telefonLink }}">{{ site.telefon }}</a></li>
+      <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+      <li><a href="https://wa.me/{{ site.whatsapp }}?text={{ site.mesajWhatsapp | urlencode }}" rel="noopener">WhatsApp</a></li>
+    </ul>
+  </div>
+</section>

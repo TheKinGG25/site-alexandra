@@ -1,0 +1,30 @@
+[
+  {
+    "intrebare": "Cum arată discuția gratuită de 15 minute?",
+    "raspuns": "Este o discuție la telefon, fără nicio obligație. Îmi spui pe scurt ce te aduce, îți pun câteva întrebări și îți spun sincer dacă cred că te pot ajuta. Dacă altcineva ți s-ar potrivi mai bine, te îndrum."
+  },
+  {
+    "intrebare": "Nu știu exact ce am. Pot să vin totuși?",
+    "raspuns": "Da. Mulți oameni vin cu o stare, nu cu o problemă clară. Pornim de acolo de unde ești."
+  },
+  {
+    "intrebare": "Copilul meu adolescent nu vrea să vină. Ce pot face?",
+    "raspuns": "Uneori, primul pas este o discuție doar cu părintele. Încrederea vine treptat, iar adolescentul trebuie să simtă că terapia este spațiul lui, nu o pedeapsă."
+  },
+  {
+    "intrebare": "Dacă sunt adolescent, ce află părinții mei?",
+    "raspuns": "Sub 18 ani, terapia începe cu acordul ambilor părinți sau al tutorelui. Ce discutăm rămâne între noi. Părinții află doar ce stabilim împreună, cu excepția situațiilor în care siguranța ta este în pericol."
+  },
+  {
+    "intrebare": "Partenerul meu nu e convins de terapia de cuplu. Merită să încercăm?",
+    "raspuns": "Nu e nevoie să fiți amândoi convinși de la început. Dacă partenerul nu vrea deloc să vină, putem lucra individual."
+  },
+  {
+    "intrebare": "Online sau în cabinet?",
+    "raspuns": "Ambele variante funcționează. Pentru ședințele online ai nevoie doar de un loc în care să poți vorbi liniștit, fără să fii auzit."
+  },
+  {
+    "intrebare": "În cât timp o să simt o schimbare?",
+    "raspuns": "Mulți oameni simt o ușurare încă din primele ședințe. Schimbările mai adânci cer timp, iar progresul îl revizuim împreună, periodic."
+  }
+]

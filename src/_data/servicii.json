@@ -1,0 +1,37 @@
+{
+  "lista": [
+    {
+      "titlu": "Psihoterapie individuală pentru adulți",
+      "scurt": "Un spațiu doar al tău, în care să înțelegi ce simți, de unde vine și ce te ține pe loc.",
+      "text": "Lucrăm împreună cu ce te apasă acum: anxietate, oboseală, autocritică, o pierdere sau o schimbare care te-a dat peste cap. Ne uităm atât la ce ai trăit și la ce simți, cât și la ce menține dificultatea. Între ședințe, primești instrumente practice pe care le poți folosi în viața de zi cu zi."
+    },
+    {
+      "titlu": "Consiliere de cuplu și de familie",
+      "scurt": "Când aceleași certuri se repetă, privim relația ca întreg, nu căutăm un vinovat.",
+      "text": "În cuplu și în familie, fiecare are povestea lui. Vă ajut să vă ascultați unii pe alții, să vedeți tiparele care se repetă și să găsiți un fel mai sincer și mai blând de a comunica. Ședințele de cuplu și de familie durează 80 de minute."
+    },
+    {
+      "titlu": "Adolescenți",
+      "scurt": "Anxietate, presiunea notelor și a examenelor, conflicte în familie, întrebări despre cine sunt.",
+      "text": "Lucrez cu adolescenți și preadolescenți de la 10 ani, cu acordul ambilor părinți sau al tutorelui. Terapia devine spațiul lor, nu o pedeapsă. Când e nevoie, lucrez și cu părinții, ca să găsim împreună cum să ajungă unii la alții."
+    }
+  ],
+  "teme": [
+    {
+      "grupa": "Emoții",
+      "teme": ["Anxietate și atacuri de panică", "Depresie", "Stres și burnout", "Stimă de sine și autocritică"]
+    },
+    {
+      "grupa": "Pierderi și schimbări",
+      "teme": ["Doliu și pierderi", "Traumă", "Tranziții de viață", "Rușine și vinovăție"]
+    },
+    {
+      "grupa": "Relații",
+      "teme": ["Conflicte în cuplu", "Divorț și separare", "Intimitate și sexualitate", "Relații în familie"]
+    },
+    {
+      "grupa": "Adolescenți",
+      "teme": ["Presiunea notelor și a examenelor", "Conflicte cu părinții", "Identitate și încredere în sine"]
+    }
+  ]
+}

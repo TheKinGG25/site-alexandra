@@ -1,0 +1,10 @@
+<article class="card card-articol" data-categorie="{{ a.data.categorie }}">
+  <p class="meta">
+    <span class="meta__categorie">{{ a.data.categorie }}</span>
+    <time datetime="{{ a.date | dataIso }}">{{ a.date | dataRo }}</time>
+    <span>{{ a.content | timpCitit }}</span>
+  </p>
+  <h3><a href="{{ a.url }}">{{ a.data.title }}</a></h3>
+  <p>{{ a.data.description }}</p>
+  <span class="link-sageata" aria-hidden="true">Citește</span>
+</article>

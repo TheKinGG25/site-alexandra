@@ -1,0 +1,67 @@
+---
+layout: layouts/base.njk
+title: "Contact și programare"
+description: "Programează discuția gratuită de 15 minute: telefon 0723 385 197, WhatsApp sau e-mail. Cabinet pe Calea Victoriei 224, sector 1, București, și ședințe online."
+permalink: /contact/
+---
+{%- from "partials/icoane.njk" import icoana -%}
+
+<section class="antet-pagina sectiune--centrat">
+  <div class="interior--text">
+    <p class="eticheta">Contact</p>
+    <h1>Hai să vorbim</h1>
+    <p class="intro">Primul pas este o discuție gratuită de 15 minute, la telefon. Mă poți suna, îmi poți scrie pe WhatsApp sau pe e-mail, cum îți e mai comod.</p>
+  </div>
+</section>
+
+<section class="sectiune sectiune--fara-sus" aria-label="Cum mă poți contacta">
+  <div class="interior">
+    <div class="contact-butoane">
+      <div class="card contact-card">
+        {{ icoana("telefon") | safe }}
+        <h2>Telefon</h2>
+        <p>{{ site.telefon }}</p>
+        <a class="buton" href="tel:{{ site.telefonLink }}">Sună acum</a>
+      </div>
+      <div class="card contact-card">
+        {{ icoana("whatsapp") | safe }}
+        <h2>WhatsApp</h2>
+        <p>{{ site.telefon }}</p>
+        <a class="buton" href="https://wa.me/{{ site.whatsapp }}?text={{ site.mesajWhatsapp | urlencode }}" rel="noopener">Scrie pe WhatsApp</a>
+      </div>
+      <div class="card contact-card">
+        {{ icoana("email") | safe }}
+        <h2>E-mail</h2>
+        <p>{{ site.email }}</p>
+        <a class="buton" href="mailto:{{ site.email }}?subject={{ 'Programare discuție gratuită' | urlencode }}">Trimite un e-mail</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sectiune sectiune--banda" aria-labelledby="cabinet">
+  <div class="interior--text">
+    <h2 id="cabinet">Cabinet și program</h2>
+    <div class="date-cabinet">
+      <div>
+        <h3>Adresa</h3>
+        <p>{{ site.adresa }}, {{ site.adresaReper }}.<br>Ședințele se pot desfășura și online.</p>
+        <a class="link-sageata" href="{{ site.linkHarta }}" rel="noopener">Deschide în Google Maps</a>
+      </div>
+      <div>
+        <h3>Program</h3>
+        <p>{{ site.program }}, cu programare.</p>
+        <p><a href="{{ site.linkedin }}" rel="noopener">LinkedIn</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sectiune" aria-labelledby="urgente">
+  <div class="interior--text">
+    <div class="atentie" role="note">
+      <h2 id="urgente" class="titlu-mic">În caz de urgență</h2>
+      <p>Psihoterapia nu este un serviciu de urgență. Dacă tu sau altcineva sunteți în pericol imediat, sună la <a href="tel:112"><strong>112</strong></a> sau mergi la cea mai apropiată unitate de primiri urgențe.</p>
+    </div>
+  </div>
+</section>

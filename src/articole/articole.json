@@ -1,0 +1,6 @@
+{
+  "layout": "layouts/articol.njk",
+  "esteArticol": true,
+  "permalink": "/articole/{{ page.fileSlug }}/",
+  "templateEngineOverride": "md"
+}

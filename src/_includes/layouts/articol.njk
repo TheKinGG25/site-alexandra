@@ -1,0 +1,40 @@
+---
+layout: layouts/base.njk
+---
+<article>
+  <header class="antet-pagina articol__antet">
+    <div class="interior--text">
+      <p class="meta">
+        <span class="meta__categorie">{{ categorie }}</span>
+        <time datetime="{{ page.date | dataIso }}">{{ page.date | dataRo }}</time>
+        <span>{{ content | timpCitit }}</span>
+      </p>
+      <h1>{{ title }}</h1>
+      <p class="intro">{{ description }}</p>
+    </div>
+  </header>
+
+  {%- if imagine %}
+  <figure class="articol__imagine">
+    <img src="{{ imagine }}" alt="" width="1200" height="675">
+  </figure>
+  {%- endif %}
+
+  <div class="interior--text text-lung">
+    {{ content | safe }}
+
+    <aside class="card card--pal articol__final sectiune--centrat" aria-label="Programare">
+      <h2>Vrei să vorbim?</h2>
+      <p>Prima discuție, de 15 minute, la telefon, este gratuită și fără nicio obligație.</p>
+      <div class="grup-butoane grup-butoane--centrat">
+        <a class="buton" href="/contact/">{{ site.butonProgramare }}</a>
+      </div>
+    </aside>
+  </div>
+</article>
+
+<section class="sectiune" aria-label="Înapoi la articole">
+  <div class="interior--text sectiune--centrat">
+    <a class="link-sageata" href="/articole/">Vezi toate articolele</a>
+  </div>
+</section>

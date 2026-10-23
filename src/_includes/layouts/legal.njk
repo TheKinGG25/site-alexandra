@@ -1,0 +1,15 @@
+---
+layout: layouts/base.njk
+---
+<section class="antet-pagina">
+  <div class="interior--text">
+    <p class="eticheta">Informații legale</p>
+    <h1>{{ title }}</h1>
+    <p>Ultima actualizare: {{ actualizat | dataRo }}</p>
+  </div>
+</section>
+<section class="sectiune sectiune--fara-sus">
+  <div class="interior--text text-lung">
+    {{ content | safe }}
+  </div>
+</section>

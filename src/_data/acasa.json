@@ -1,0 +1,47 @@
+{
+  "titlu": "Ascultă lumea din tine.",
+  "subtitlu": "Sunt Alexandra Pisaru, psiholog clinician și psihoterapeut. Lucrez cu adulți, adolescenți, cupluri și familii, în cabinet lângă Piața Victoriei și online.",
+  "repere": [
+    { "titlu": "50 de minute", "text": "durează o ședință individuală" },
+    { "titlu": "15 minute gratuit", "text": "prima discuție, la telefon" },
+    { "titlu": "Cabinet și online", "text": "lângă Piața Victoriei sau de oriunde" },
+    { "titlu": "Cod RUP 31147", "text": "atestat de Colegiul Psihologilor din România" }
+  ],
+  "regasesti": {
+    "titlu": "Poate te regăsești aici",
+    "intro": "Mulți oameni ajung să creadă că trebuie să ducă singuri lucrurile grele. Nu e nevoie.",
+    "acum": {
+      "titlu": "Ce trăiești acum",
+      "puncte": [
+        "Te gândești mult la lucruri care încă nu s-au întâmplat și îți e greu să te liniștești.",
+        "Te simți fără energie, chiar și după ce te odihnești.",
+        "Te judeci aspru și rareori simți că faci destul.",
+        "În cuplu sau în familie, aceleași certuri se repetă.",
+        "Treci printr-o despărțire, o pierdere sau o schimbare și nu știi cum să mergi mai departe.",
+        "Copilul tău adolescent s-a închis în el și nu mai știi cum să ajungi la el."
+      ]
+    },
+    "terapia": {
+      "titlu": "Ce poate aduce terapia",
+      "puncte": [
+        "Mai multă claritate despre ce simți și de unde vine.",
+        "Un fel mai blând de a te raporta la tine.",
+        "Instrumente concrete pentru anxietate și stres.",
+        "O comunicare mai sinceră cu oamenii apropiați.",
+        "Senzația că nu mai porți totul pe umerii tăi."
+      ]
+    }
+  },
+  "servicii": {
+    "titlu": "Cum putem lucra împreună",
+    "intro": "Fiecare om vine cu povestea lui. Alegem împreună forma potrivită."
+  },
+  "articole": {
+    "titlu": "Din articole",
+    "intro": "Gânduri despre emoții, relații și schimbare."
+  },
+  "final": {
+    "titlu": "Uneori, schimbarea începe cu o conversație.",
+    "text": "Primul pas este o discuție gratuită de 15 minute, la telefon. Îmi spui pe scurt ce te aduce și vedem împreună dacă sunt omul potrivit pentru tine."
+  }
+}

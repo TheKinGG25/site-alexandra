@@ -1,0 +1,100 @@
+---
+layout: layouts/base.njk
+title: "Servicii și tarife"
+description: "Psihoterapie individuală pentru adulți, consiliere de cuplu și de familie, terapie pentru adolescenți. Teme, tarife, reguli de programare și întrebări frecvente."
+permalink: /servicii/
+---
+
+<section class="antet-pagina sectiune--centrat">
+  <div class="interior--text">
+    <p class="eticheta">Servicii</p>
+    <h1>Cum te pot însoți</h1>
+    <p class="intro">Lucrez cu adulți, adolescenți, cupluri și familii, în cabinet, lângă Piața Victoriei, și online.</p>
+  </div>
+</section>
+
+<section class="sectiune sectiune--fara-sus" aria-label="Servicii">
+  <div class="interior">
+    {%- for s in servicii.lista %}
+    <article class="serviciu">
+      <h2>{{ s.titlu }}</h2>
+      <div>
+        <p><strong>{{ s.scurt }}</strong></p>
+        <p>{{ s.text }}</p>
+      </div>
+    </article>
+    {%- endfor %}
+  </div>
+</section>
+
+<section class="sectiune sectiune--banda" aria-labelledby="teme">
+  <div class="interior">
+    <div class="sectiune--centrat">
+      <h2 id="teme">Teme cu care lucrez</h2>
+      <p class="intro">Nu e nevoie să știi exact în ce categorie se încadrează ce trăiești. Pornim de acolo de unde ești.</p>
+    </div>
+    <div class="grila-teme">
+      {%- for g in servicii.teme %}
+      <div class="card">
+        <h3>{{ g.grupa }}</h3>
+        <ul class="lista-puncte">
+          {%- for t in g.teme %}<li>{{ t }}</li>{% endfor %}
+        </ul>
+      </div>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="sectiune" id="tarife" aria-labelledby="tarife-titlu">
+  <div class="interior--text">
+    <div class="sectiune--centrat">
+      <h2 id="tarife-titlu">Tarife</h2>
+    </div>
+    <ul class="tarife">
+      <li>
+        <span class="tarife__nume"><strong>{{ tarife.discutieGratuita.titlu }}</strong><span>{{ tarife.discutieGratuita.detalii }}</span></span>
+        <span class="tarife__pret">{{ tarife.discutieGratuita.pret }}</span>
+      </li>
+      {%- for t in tarife.sedinte %}
+      <li>
+        <span class="tarife__nume"><strong>{{ t.titlu }}</strong><span>{{ t.detalii }}</span></span>
+        <span class="tarife__pret">{{ t.pret | pret }} lei</span>
+      </li>
+      {%- endfor %}
+      <li>
+        <span class="tarife__nume"><strong>{{ tarife.cupluFamilie.titlu }}</strong><span>{{ tarife.cupluFamilie.detalii }}</span></span>
+        <span class="tarife__pret tarife__pret--text">{{ tarife.cupluFamilie.pret }}</span>
+      </li>
+    </ul>
+
+    <div class="reguli">
+      <h3>Programare, plată și anulare</h3>
+      <ul class="lista-puncte">
+        {%- for r in tarife.reguli %}<li>{{ r }}</li>{% endfor %}
+      </ul>
+    </div>
+
+    <div class="grup-butoane grup-butoane--centrat">
+      <a class="buton" href="/contact/">{{ site.butonProgramare }}</a>
+    </div>
+  </div>
+</section>
+
+<section class="sectiune sectiune--banda" id="intrebari" aria-labelledby="intrebari-titlu">
+  <div class="interior--text">
+    <div class="sectiune--centrat">
+      <h2 id="intrebari-titlu">Întrebări frecvente</h2>
+    </div>
+    <div class="intrebari">
+      {%- for q in intrebari %}
+      <details>
+        <summary>{{ q.intrebare }}</summary>
+        <p>{{ q.raspuns }}</p>
+      </details>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+{% include "partials/final-contact.njk" %}

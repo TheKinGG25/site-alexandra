@@ -1,0 +1,221 @@
+# Configurația interfeței de editare Pages CMS (https://app.pagescms.org).
+# De aici se adaugă articole și se schimbă prețuri sau texte, fără cod.
+
+media:
+  input: src/assets/imagini/articole
+  output: /assets/imagini/articole
+
+content:
+  - name: articole
+    label: Articole
+    type: collection
+    path: src/articole
+    filename: "{primary}.md"
+    exclude: [articole.json]
+    view:
+      fields: [title, categorie, date]
+      primary: title
+      sort: [date]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: Titlu
+        type: string
+        required: true
+      - name: description
+        label: Rezumat (1-2 fraze, apare în listă și pe Google)
+        type: text
+        required: true
+      - name: date
+        label: Data publicării
+        type: date
+        required: true
+      - name: categorie
+        label: Categorie
+        type: select
+        required: true
+        options:
+          values: ["Emoții", "Pierderi și schimbări", "Relații", "Adolescenți și părinți"]
+      - name: imagine
+        label: Imagine (opțional)
+        type: image
+      - name: body
+        label: Textul articolului
+        type: rich-text
+
+  - name: tarife
+    label: Tarife și reguli
+    type: file
+    path: src/_data/tarife.json
+    format: json
+    fields:
+      - name: discutieGratuita
+        label: Discuția inițială
+        type: object
+        fields:
+          - { name: titlu, label: Denumire, type: string }
+          - { name: detalii, label: Detalii, type: string }
+          - { name: pret, label: Preț (text), type: string }
+      - name: sedinte
+        label: Ședințe și pachete
+        type: object
+        list: true
+        fields:
+          - { name: titlu, label: Denumire, type: string }
+          - { name: detalii, label: Detalii, type: string }
+          - { name: pret, label: Preț în lei (doar cifre), type: number }
+      - name: cupluFamilie
+        label: Cuplu și familie
+        type: object
+        fields:
+          - { name: titlu, label: Denumire, type: string }
+          - { name: detalii, label: Detalii, type: string }
+          - { name: pret, label: Preț (text), type: string }
+      - name: reguli
+        label: Reguli de plată și anulare
+        type: text
+        list: true
+
+  - name: site
+    label: Date de contact și setări
+    type: file
+    path: src/_data/site.json
+    format: json
+    fields:
+      - { name: url, label: Adresa site-ului, type: string }
+      - { name: nume, label: Nume, type: string }
+      - { name: titlu, label: Titlu profesional complet, type: string }
+      - { name: titluScurt, label: Titlu profesional scurt, type: string }
+      - { name: codRup, label: Cod RUP, type: string }
+      - { name: atestat, label: Atestat, type: string }
+      - { name: operator, label: Denumirea cabinetului, type: string }
+      - { name: cui, label: CUI, type: string }
+      - { name: telefon, label: Telefon (cum se afișează), type: string }
+      - { name: telefonLink, label: Telefon pentru apel (+40...), type: string }
+      - { name: whatsapp, label: Număr WhatsApp (40..., fără +), type: string }
+      - { name: email, label: E-mail, type: string }
+      - { name: adresa, label: Adresa cabinetului, type: string }
+      - { name: adresaReper, label: Reper, type: string }
+      - { name: strada, label: Strada și numărul, type: string }
+      - { name: oras, label: Oraș, type: string }
+      - { name: codPostal, label: Cod poștal, type: string }
+      - { name: linkHarta, label: Link Google Maps, type: string }
+      - { name: program, label: Program, type: string }
+      - { name: linkedin, label: Link LinkedIn, type: string }
+      - { name: googleAnalyticsId, label: Cod Google Analytics (G-...), type: string }
+      - { name: butonProgramare, label: Textul butonului principal, type: string }
+      - { name: citat, label: Citatul de pe prima pagină, type: text }
+      - { name: mesajWhatsapp, label: Mesaj precompletat pe WhatsApp, type: string }
+
+  - name: acasa
+    label: Pagina Acasă
+    type: file
+    path: src/_data/acasa.json
+    format: json
+    fields:
+      - { name: titlu, label: Titlul mare, type: string }
+      - { name: subtitlu, label: Fraza de sub titlu, type: text }
+      - name: repere
+        label: Repere
+        type: object
+        list: true
+        fields:
+          - { name: titlu, label: Titlu, type: string }
+          - { name: text, label: Text, type: string }
+      - name: regasesti
+        label: Poate te regăsești aici
+        type: object
+        fields:
+          - { name: titlu, label: Titlu, type: string }
+          - { name: intro, label: Introducere, type: text }
+          - name: acum
+            label: Ce trăiești acum
+            type: object
+            fields:
+              - { name: titlu, label: Titlu, type: string }
+              - { name: puncte, label: Puncte, type: text, list: true }
+          - name: terapia
+            label: Ce poate aduce terapia
+            type: object
+            fields:
+              - { name: titlu, label: Titlu, type: string }
+              - { name: puncte, label: Puncte, type: text, list: true }
+      - name: servicii
+        label: Secțiunea Servicii
+        type: object
+        fields:
+          - { name: titlu, label: Titlu, type: string }
+          - { name: intro, label: Introducere, type: text }
+      - name: articole
+        label: Secțiunea Articole
+        type: object
+        fields:
+          - { name: titlu, label: Titlu, type: string }
+          - { name: intro, label: Introducere, type: text }
+      - name: final
+        label: Finalul paginii
+        type: object
+        fields:
+          - { name: titlu, label: Titlu, type: string }
+          - { name: text, label: Text, type: text }
+
+  - name: despre
+    label: Despre mine (text)
+    type: file
+    path: src/despre-mine.md
+    fields:
+      - { name: layout, label: Șablon (nu modifica), type: string, hidden: true }
+      - { name: title, label: Titlul paginii, type: string }
+      - { name: description, label: Descriere pentru Google, type: text }
+      - { name: permalink, label: Adresă (nu modifica), type: string, hidden: true }
+      - { name: salut, label: Titlul mare, type: string }
+      - { name: body, label: Text, type: rich-text }
+
+  - name: formare
+    label: Despre mine (formare și valori)
+    type: file
+    path: src/_data/formare.json
+    format: json
+    fields:
+      - { name: valori, label: Valori, type: string, list: true }
+      - name: lista
+        label: Formare
+        type: object
+        list: true
+        fields:
+          - { name: titlu, label: Titlu, type: string }
+          - { name: detalii, label: Detalii, type: text }
+
+  - name: servicii
+    label: Servicii și teme
+    type: file
+    path: src/_data/servicii.json
+    format: json
+    fields:
+      - name: lista
+        label: Servicii
+        type: object
+        list: true
+        fields:
+          - { name: titlu, label: Titlu, type: string }
+          - { name: scurt, label: Descriere scurtă, type: text }
+          - { name: text, label: Descriere completă, type: text }
+      - name: teme
+        label: Teme
+        type: object
+        list: true
+        fields:
+          - { name: grupa, label: Grupa, type: string }
+          - { name: teme, label: Teme, type: string, list: true }
+
+  - name: intrebari
+    label: Întrebări frecvente
+    type: file
+    path: src/_data/intrebari.json
+    format: json
+    list: true
+    fields:
+      - { name: intrebare, label: Întrebare, type: string }
+      - { name: raspuns, label: Răspuns, type: text }
