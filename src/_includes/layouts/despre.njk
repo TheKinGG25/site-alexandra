@@ -26,13 +26,27 @@ layout: layouts/base.njk
   </div>
 </section>
 
-<section class="sectiune sectiune--banda sectiune--centrat" aria-labelledby="valori">
-  <div class="interior--text">
-    <h2 id="valori">Ce contează pentru mine</h2>
-    <ul class="valori">
-      {%- for v in formare.valori %}<li>{{ v }}</li>{% endfor %}
-    </ul>
+<section class="sectiune sectiune--banda" aria-labelledby="valori">
+  <div class="interior">
+    <div class="sectiune--centrat">
+      <h2 id="valori">Ce poți aștepta de la mine</h2>
+    </div>
+    <div class="grila-teme">
+      {%- for v in formare.valori %}
+      <div class="card">
+        <h3>{{ v.titlu }}</h3>
+        <p>{{ v.text }}</p>
+      </div>
+      {%- endfor %}
+    </div>
+    {%- if formare.motto %}
+    <blockquote class="citat citat--sub-carduri">
+      <p>{{ formare.motto }}</p>
+    </blockquote>
+    {%- endif %}
   </div>
 </section>
+
+
 
 {% include "partials/final-contact.njk" %}

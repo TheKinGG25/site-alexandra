@@ -179,7 +179,14 @@ content:
     path: src/_data/formare.json
     format: json
     fields:
-      - { name: valori, label: Valori, type: string, list: true }
+      - { name: motto, label: Motto (apare mare pe pagină), type: string }
+      - name: valori
+        label: Valori
+        type: object
+        list: true
+        fields:
+          - { name: titlu, label: Valoare, type: string }
+          - { name: text, label: Ce înseamnă pentru mine, type: text }
       - name: lista
         label: Formare
         type: object

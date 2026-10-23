@@ -379,11 +379,6 @@ strong { font-weight: 600; color: var(--verde-inchis); }
 .lista-formare li { padding: 1.25rem 0; border-bottom: 1px solid var(--salvie-chenar); }
 .lista-formare strong { display: block; font-weight: 600; }
 
-.valori { list-style: none; padding: 0; margin: 2rem 0 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; }
-.valori li {
-  border: 1px solid var(--salvie-chenar); background: var(--crem);
-  border-radius: 999px; padding: 0.5rem 1.25rem; font-weight: 500; color: var(--verde-inchis);
-}
 
 /* Servicii */
 .serviciu { display: grid; gap: 1rem; padding-block: 2.5rem; border-top: 1px solid var(--salvie-chenar); }
@@ -518,3 +513,4 @@ strong { font-weight: 600; color: var(--verde-inchis); }
 @media (min-width: 48rem) { .grila-carduri--articole { grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr)); } }
 .card-articol .link-sageata { align-self: flex-start; }
 .despre__foto .foto { aspect-ratio: 3 / 4; object-position: center; }
+.citat--sub-carduri { margin-top: clamp(3rem, 7vw, 5rem); }

@@ -1,5 +1,23 @@
 {
-  "valori": ["Respect", "Empatie", "Confidențialitate", "Profesionalism"],
+  "motto": "Ascultă lumea din tine.",
+  "valori": [
+    {
+      "titlu": "Respect",
+      "text": "Pentru povestea ta, pentru ritmul tău și pentru alegerile tale. Tu știi cel mai bine cum e să trăiești viața ta."
+    },
+    {
+      "titlu": "Empatie",
+      "text": "Încerc să înțeleg ce trăiești din locul tău, nu din al meu, fără grabă și fără judecată."
+    },
+    {
+      "titlu": "Confidențialitate",
+      "text": "Ce îmi spui rămâne între noi. Excepțiile sunt doar cele prevăzute de lege, când viața cuiva este în pericol."
+    },
+    {
+      "titlu": "Profesionalism",
+      "text": "Lucrez după Codul deontologic al profesiei de psiholog și continui să învăț, prin cursuri și formări noi."
+    }
+  ],
   "lista": [
     {
       "titlu": "Psiholog clinician atestat",
