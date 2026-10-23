@@ -5,7 +5,7 @@ import { readdirSync, readFileSync, statSync } from "node:fs";
 import { join } from "node:path";
 
 const interzise = [
-  { regula: /[—–]/g, mesaj: "linie de pauză lungă (folosește cratima -)" },
+  { regula: /[\u2014\u2013]/g, mesaj: "linie de pauză lungă (folosește cratima -)" },
   { regula: /supervizare/gi, mesaj: "cuvântul „supervizare”" },
   { regula: /pasul\.ro/gi, mesaj: "Pasul.ro" },
   { regula: /instagram/gi, mesaj: "Instagram" },
