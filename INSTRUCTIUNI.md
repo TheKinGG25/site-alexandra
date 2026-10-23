@@ -173,14 +173,18 @@ După **Save**, schimbarea apare pe site în 1-2 minute. Dacă nu o vezi, reînc
 
 ## 7. Înlocuirea pozei și a logo-ului
 
-Acum site-ul folosește o poză și un logo **provizorii**. Cel mai simplu e să mi le trimiți și le pun eu. Dacă vrei să o faci singură:
+Cel mai simplu e să îmi trimiți fișierele noi și le pun eu. Dacă vrei să o faci singură:
 
 1. Pe GitHub, deschide depozitul `site-alexandra`, apoi dosarul `src/assets/imagini`.
 2. Apasă **Add file** > **Upload files**.
 3. Încarcă fișierele cu **exact aceste nume**, ca să le înlocuiască pe cele vechi:
-   - poza ta: `alexandra-pisaru.jpg` (portret, ideal 800 x 1000 pixeli sau mai mare, aceeași proporție)
-   - logo-ul: `logo.svg` (dacă ai doar PNG, trimite-mi-l mie, ca să ajustez codul)
+   - poza de pe prima pagină: `alexandra-pisaru.jpg` (portret, pe verticală)
+   - poza de la Despre mine: `alexandra-pisaru-2.jpg` (portret, pe verticală)
+   - inițialele AP din meniu: `logo-ap.png` (cu fundal transparent)
+   - logo-ul complet din subsol: `logo-complet.png` (cu fundal transparent)
 4. Apasă **Commit changes**.
+
+Înainte de încărcare, verifică să nu fie fotografii foarte mari (peste 2000 de pixeli sau peste 1 MB), ca site-ul să rămână rapid.
 
 ---
 
@@ -203,7 +207,6 @@ Site-ul are deja bannerul de acord pentru cookie-uri. Bannerul apare și statist
 
 - [ ] **CUI-ul** cabinetului (Pages CMS > Date de contact și setări > CUI)
 - [ ] **Perioadele de păstrare a datelor** din pagina Protecția datelor, după ce le verifici cu cerințele Colegiului (le completez eu, spune-mi doar perioadele)
-- [ ] **Poza** și **logo-ul**
 - [ ] **Citatul** de pe prima pagină (acum e unul provizoriu)
 - [ ] **Codul Google Analytics**
 - [ ] **Codul poștal** al cabinetului (opțional, ajută la Google)

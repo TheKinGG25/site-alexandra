@@ -187,7 +187,7 @@ strong { font-weight: 600; color: var(--verde-inchis); }
 
 .sigla { display: inline-flex; align-items: center; gap: 0.75rem; text-decoration: none; color: var(--verde-inchis); }
 .sigla:hover { color: var(--verde-inchis); }
-.sigla img { width: 44px; height: 44px; }
+.sigla img { width: auto; height: 40px; }
 .sigla__text { display: flex; flex-direction: column; line-height: 1.2; }
 .sigla__nume { font-family: var(--font-titluri); font-weight: 600; font-size: 1.1rem; }
 .sigla__rol { font-size: 0.8rem; color: var(--verde); }
@@ -253,7 +253,7 @@ strong { font-weight: 600; color: var(--verde-inchis); }
 .hero .intro { font-size: 1.2em; }
 .hero__foto { margin: 0; }
 .hero__foto img, .foto {
-  width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 30%;
+  width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 25%;
   border-radius: var(--raza);
   background: var(--salvie-pal);
 }
@@ -473,8 +473,8 @@ strong { font-weight: 600; color: var(--verde-inchis); }
   display: grid; gap: 2.5rem; padding-block: 4rem 3rem;
 }
 @media (min-width: 48rem) { .subsol__interior { grid-template-columns: 1.4fr 1fr 1fr; gap: 3rem; } }
-.sigla--subsol { margin-bottom: 1rem; }
-.sigla--subsol img { width: 40px; height: 40px; }
+.sigla--subsol { display: inline-block; margin-bottom: 1.25rem; }
+.sigla--subsol img { width: min(100%, 17rem); height: auto; }
 .subsol__titlu { font-family: var(--font-text); font-size: 0.875rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--verde-inchis); margin-bottom: 1rem; }
 .subsol__lista { list-style: none; margin: 0; padding: 0; }
 .subsol__lista li { margin-bottom: 0.5rem; }
@@ -517,3 +517,4 @@ strong { font-weight: 600; color: var(--verde-inchis); }
 .tabel-scroll { overflow-x: auto; }
 @media (min-width: 48rem) { .grila-carduri--articole { grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr)); } }
 .card-articol .link-sageata { align-self: flex-start; }
+.despre__foto .foto { aspect-ratio: 3 / 4; object-position: center; }
