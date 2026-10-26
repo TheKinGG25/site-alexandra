@@ -5,7 +5,7 @@ Ghid pas cu pas pentru publicarea și îngrijirea site-ului. Nu ai nevoie să ș
 ## Cuprins
 
 1. [Cum e organizat site-ul](#1-cum-e-organizat-site-ul)
-2. [Publicarea gratuită pe Cloudflare Pages](#2-publicarea-gratuită-pe-cloudflare-pages)
+2. [Publicarea gratuită pe Cloudflare](#2-publicarea-gratuită-pe-cloudflare)
 3. [Cumpărarea și legarea domeniului](#3-cumpărarea-și-legarea-domeniului)
 4. [Interfața de editare (Pages CMS)](#4-interfața-de-editare-pages-cms)
 5. [Adăugarea unui articol nou](#5-adăugarea-unui-articol-nou)
@@ -40,26 +40,25 @@ Pentru curiozitate, iată unde stau lucrurile:
 
 ---
 
-## 2. Publicarea gratuită pe Cloudflare Pages
+## 2. Publicarea gratuită pe Cloudflare
 
-Cloudflare Pages este gratuit pentru un site ca al tău: nu are limită de vizitatori și include certificatul de securitate (lacătul din bara browserului).
+Cloudflare este gratuit pentru un site ca al tău: nu are limită de vizitatori și include certificatul de securitate (lacătul din bara browserului).
+
+Proiectul din Cloudflare este de tip **Worker** și publică ce se află pe ramura `main` a depozitului. Setările lui sunt deja în fișierul `wrangler.jsonc`; în Cloudflare trebuie completate doar câmpurile de mai jos.
 
 **O singură dată:**
 
-1. Intră pe [dash.cloudflare.com/sign-up](https://dash.cloudflare.com/sign-up) și fă-ți un cont gratuit (e-mail și parolă).
-2. În meniul din stânga, alege **Workers & Pages** (poate apărea și ca **Compute** > **Workers & Pages**), apoi apasă **Create** (Creează).
-3. Alege fila **Pages**, apoi **Connect to Git** (Conectează la Git).
-4. Apasă **Connect GitHub**, intră în contul tău de GitHub și dă acces la depozitul `site-alexandra`.
-5. Selectează depozitul `site-alexandra` și apasă **Begin setup**.
-6. Completează așa:
-   - **Project name**: `alexandrapisaru` (va da și adresa provizorie `alexandrapisaru.pages.dev`)
-   - **Production branch**: `main`
-   - **Framework preset**: `None`
+1. Intră pe [dash.cloudflare.com](https://dash.cloudflare.com), în meniul din stânga alege **Workers & Pages** (poate apărea și ca **Compute** > **Workers & Pages**) și deschide proiectul `site-alexandra`.
+2. Mergi la **Settings** > **Build** și completează așa:
+   - **Git branch** (ramura de producție): `main`
    - **Build command**: `npm run build`
-   - **Build output directory**: `_site`
-7. Apasă **Save and Deploy**. După 1-2 minute, site-ul e online la adresa `https://alexandrapisaru.pages.dev`.
+   - **Deploy command**: `npx wrangler deploy`
+   - **Non-production branch deploy command**: `npx wrangler preview`
+3. Salvează, apoi mergi la fila **Deployments** și apasă **Retry deployment** (sau salvează orice modificare pe `main`). După 1-2 minute, site-ul e online la adresa `*.workers.dev` afișată în pagina proiectului.
 
-> Important: Cloudflare publică ce se află pe ramura `main` a depozitului. Lucrul la site se face acum pe o ramură separată. Când ești mulțumită de rezultat, îți pregătesc eu unirea cu `main` (pe GitHub se numește „pull request”). Până atunci, Cloudflare îți arată și o previzualizare pentru fiecare ramură, la o adresă separată.
+> Important: numele proiectului din Cloudflare trebuie să fie identic cu `"name"` din `wrangler.jsonc` (acum `site-alexandra`). Dacă proiectul are alt nume, spune-mi și schimb rândul acela.
+
+> Lucrul la site se face pe ramuri separate. Când ești mulțumită de rezultat, îți pregătesc eu unirea cu `main` (pe GitHub se numește „pull request”). Până atunci, Cloudflare îți arată și o previzualizare pentru fiecare ramură, la o adresă separată.
 
 **De aici înainte** nu mai ai nimic de făcut: orice modificare salvată pe `main` (din Pages CMS sau din GitHub) apare pe site în 1-2 minute.
 
@@ -81,8 +80,8 @@ Domeniile `.ro` se cumpără de la un registrar acreditat de ROTLD, de exemplu R
 
 ### Pasul 3: leagă domeniul de site
 
-1. În Cloudflare, mergi la **Workers & Pages**, deschide proiectul `alexandrapisaru`, apoi fila **Custom domains**.
-2. Apasă **Set up a custom domain**, scrie `alexandrapisaru.ro` și confirmă. Cloudflare configurează totul singur.
+1. În Cloudflare, mergi la **Workers & Pages**, deschide proiectul `site-alexandra`, apoi **Settings** > **Domains & Routes**.
+2. Apasă **Add** > **Custom domain**, scrie `alexandrapisaru.ro` și confirmă. Cloudflare configurează totul singur.
 3. Repetă pentru `www.alexandrapisaru.ro`.
 4. Ca adresa cu `www` să ducă la cea fără `www`: în pagina domeniului, mergi la **Rules** > **Redirect Rules** > **Create rule**, alege șablonul **Redirect from WWW to root** și salvează.
 

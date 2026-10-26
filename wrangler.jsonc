@@ -1,0 +1,11 @@
+// Configurația pentru Cloudflare (Workers): publică site-ul construit în _site.
+// "name" trebuie să fie identic cu numele proiectului din Cloudflare.
+{
+  "name": "site-alexandra",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./_site",
+    "not_found_handling": "404-page"
+  },
+  "previews": {}
+}
