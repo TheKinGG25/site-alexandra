@@ -1,19 +1,22 @@
 ---
 layout: layouts/base.njk
-titluSeo: "Alexandra Pisaru | Psiholog clinician și psihoterapeut în București"
-description: "Psihoterapie pentru adulți, adolescenți, cupluri și familii, în cabinet lângă Piața Victoriei, București, și online. Prima discuție, de 15 minute, este gratuită."
+titluSeo: "Alexandra Pisaru | Psiholog clinician și psihoterapeut"
+description: "Psihoterapie și consiliere în cabinet și online, pentru adulți, cupluri, familii și adolescenți de la 12 ani. Discuția inițială, de aproximativ 15 minute, este gratuită."
 ---
 {%- from "partials/icoane.njk" import icoana -%}
 
 <section class="hero">
   <div class="interior hero__grila">
     <div>
-      <p class="eticheta">{{ site.titluScurt }}</p>
+      <p class="eticheta">{{ acasa.eticheta }}</p>
       <h1>{{ acasa.titlu }}</h1>
       <p class="intro">{{ acasa.subtitlu }}</p>
+      {%- if acasa.prezentare %}
+      <p>{{ acasa.prezentare }}</p>
+      {%- endif %}
       <div class="grup-butoane">
         <a class="buton" href="/contact/">{{ site.butonProgramare }}</a>
-        <a class="buton buton--secundar" href="/despre-mine/">Despre mine</a>
+        <a class="buton buton--secundar" href="/despre-mine/">{{ acasa.butonSecundar }}</a>
       </div>
     </div>
     <figure class="hero__foto">
@@ -55,36 +58,31 @@ description: "Psihoterapie pentru adulți, adolescenți, cupluri și familii, î
   </div>
 </section>
 
-{%- if site.citat %}
-<section class="sectiune sectiune--banda" aria-label="Citat">
-  <div class="interior">
-    <blockquote class="citat">
-      <svg class="citat__semn" viewBox="0 0 40 30" fill="currentColor" aria-hidden="true"><path d="M0 30V17C0 7 5 1.5 14 0l1.5 4C10 5.5 7.5 9 7.5 13H15v17H0zm22 0V17c0-10 5-15.5 14-17l1.5 4C32 5.5 29.5 9 29.5 13H37v17H22z"/></svg>
-      <p>{{ site.citat }}</p>
-      <footer>{{ site.nume }}</footer>
-    </blockquote>
-  </div>
-</section>
-{%- endif %}
-
-<section class="sectiune" aria-labelledby="servicii">
+<section class="sectiune sectiune--banda" aria-labelledby="servicii">
   <div class="interior">
     <div class="sectiune--centrat">
-      <p class="eticheta">Servicii</p>
       <h2 id="servicii">{{ acasa.servicii.titlu }}</h2>
       <p class="intro">{{ acasa.servicii.intro }}</p>
     </div>
-    <div class="grila-carduri">
-      {%- set icoaneServicii = ["persoana", "cuplu", "frunza"] %}
-      {%- for s in servicii.lista %}
+    <div class="grila-carduri grila-carduri--patru">
+      {%- for s in acasa.servicii.carduri %}
       <article class="card card-serviciu">
-        {{ icoana(icoaneServicii[loop.index0] or "frunza") | safe }}
+        {{ icoana(s.icoana or "frunza") | safe }}
         <h3>{{ s.titlu }}</h3>
-        <p>{{ s.scurt }}</p>
+        <p>{{ s.text }}</p>
       </article>
       {%- endfor %}
     </div>
-    <p class="centrat-jos"><a class="link-sageata" href="/servicii/">Vezi serviciile, temele și tarifele</a></p>
+    <p class="centrat-jos"><a class="link-sageata" href="/servicii/">{{ acasa.servicii.link }}</a></p>
+  </div>
+</section>
+
+<section class="sectiune sectiune--centrat" aria-labelledby="cabinet-online">
+  <div class="interior--text">
+    <h2 id="cabinet-online">{{ acasa.cabinetOnline.titlu }}</h2>
+    {%- for p in acasa.cabinetOnline.paragrafe %}
+    <p class="intro">{{ p }}</p>
+    {%- endfor %}
   </div>
 </section>
 

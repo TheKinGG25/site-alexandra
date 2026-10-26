@@ -514,3 +514,4 @@ strong { font-weight: 600; color: var(--verde-inchis); }
 .card-articol .link-sageata { align-self: flex-start; }
 .despre__foto .foto { aspect-ratio: 3 / 4; object-position: center; }
 .citat--sub-carduri { margin-top: clamp(3rem, 7vw, 5rem); }
+@media (min-width: 62rem) { .grila-carduri--patru { grid-template-columns: repeat(4, 1fr); } }

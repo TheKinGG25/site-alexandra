@@ -5,7 +5,7 @@
         <img src="/assets/imagini/logo-complet.png" alt="{{ site.nume }}, psiholog clinician, psihoterapeut integrativ" width="380" height="74">
       </a>
       <p>{{ site.titlu }}</p>
-      <p class="subsol__mic">Cod RUP {{ site.codRup }}. {{ site.atestat }}.</p>
+      <p class="subsol__mic">Cod RUP {{ site.codRup }}.{% if site.atestat %} {{ site.atestat }}.{% endif %}</p>
     </div>
 
     <div class="subsol__col">

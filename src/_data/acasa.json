@@ -1,15 +1,18 @@
 {
+  "eticheta": "Psihoterapie și consiliere, în cabinet sau online",
   "titlu": "Ascultă lumea din tine.",
-  "subtitlu": "Sunt Alexandra Pisaru, psiholog clinician și psihoterapeut. Lucrez cu adulți, adolescenți, cupluri și familii, în cabinet lângă Piața Victoriei și online.",
+  "subtitlu": "Nu trebuie să știi exact ce te apasă ca să ceri sprijin. Putem explora împreună ce trăiești și de ce ai nevoie, într-un cadru atent și fără judecată, în care să găsești înțelegere și sprijin.",
+  "prezentare": "Sunt Alexandra Pisaru, psiholog clinician și psihoterapeut, cu formare de bază în psihoterapie integrativă.",
+  "butonSecundar": "Află cum lucrez",
   "repere": [
-    { "titlu": "50 de minute", "text": "durează o ședință individuală" },
-    { "titlu": "15 minute gratuit", "text": "prima discuție, la telefon" },
-    { "titlu": "Cabinet și online", "text": "lângă Piața Victoriei sau de oriunde" },
-    { "titlu": "Cod RUP 31147", "text": "atestat de Colegiul Psihologilor din România" }
+    { "titlu": "Discuție inițială gratuită", "text": "aproximativ 15 minute, la telefon" },
+    { "titlu": "În cabinet sau online", "text": "toate serviciile, în ambele formate" },
+    { "titlu": "Adulți, cupluri și familii", "text": "și adolescenți de la 12 ani" },
+    { "titlu": "În ritmul tău", "text": "un cadru atent, fără grabă" }
   ],
   "regasesti": {
     "titlu": "Poate te regăsești aici",
-    "intro": "Mulți oameni ajung să creadă că trebuie să ducă singuri lucrurile grele. Nu e nevoie.",
+    "intro": "Oamenii vin la terapie din motive diferite: neliniște, oboseală, o relație care doare sau senzația că duc totul pe cont propriu.",
     "acum": {
       "titlu": "Ce trăiești acum",
       "puncte": [
@@ -18,30 +21,64 @@
         "Te judeci aspru și rareori simți că faci destul.",
         "În cuplu sau în familie, aceleași certuri se repetă.",
         "Treci printr-o despărțire, o pierdere sau o schimbare și nu știi cum să mergi mai departe.",
+        "Treci prin adolescență și simți că îți este greu să le vorbești celor din jur despre ce te apasă.",
         "Copilul tău adolescent s-a închis în el și nu mai știi cum să ajungi la el."
       ]
     },
     "terapia": {
-      "titlu": "Ce poate aduce terapia",
+      "titlu": "Ce putem explora împreună",
       "puncte": [
-        "Mai multă claritate despre ce simți și de unde vine.",
-        "Un fel mai blând de a te raporta la tine.",
-        "Instrumente concrete pentru anxietate și stres.",
-        "O comunicare mai sinceră cu oamenii apropiați.",
-        "Senzația că nu mai porți totul pe umerii tăi."
+        "De unde vin emoțiile care te copleșesc și ce le menține.",
+        "Cum ai putea să te raportezi la tine cu mai multă blândețe.",
+        "Instrumente concrete pe care să le încerci când apar anxietatea și stresul.",
+        "Cum ai putea să comunici mai deschis cu oamenii apropiați.",
+        "Ce te-ar putea ajuta să nu mai simți că duci totul pe cont propriu."
       ]
     }
   },
   "servicii": {
-    "titlu": "Cum putem lucra împreună",
-    "intro": "Fiecare om vine cu povestea lui. Alegem împreună forma potrivită."
+    "titlu": "Cum te pot sprijini",
+    "intro": "Alegem împreună forma potrivită, în funcție de ce te aduce și de cine este implicat.",
+    "carduri": [
+      {
+        "titlu": "Psihoterapie individuală pentru adulți",
+        "text": "Pentru anxietate, stres, autocritică, pierderi sau schimbări care te-au dat peste cap. Lucrăm în ritmul tău, pornind de la ce aduci la fiecare întâlnire.",
+        "icoana": "persoana"
+      },
+      {
+        "titlu": "Consiliere de cuplu",
+        "text": "Când comunicarea s-a blocat sau aceleași neînțelegeri revin. Fiecare dintre voi are loc să spună cum vede lucrurile.",
+        "icoana": "cuplu"
+      },
+      {
+        "titlu": "Consiliere de familie",
+        "text": "Când tensiunile din familie îi afectează pe toți. Privim relațiile ca întreg, fără să căutăm un vinovat.",
+        "icoana": "familie"
+      },
+      {
+        "titlu": "Psihoterapie individuală pentru adolescenți",
+        "text": "Pentru adolescenți de la 12 ani, un spațiu în care pot vorbi deschis despre ce trăiesc. Limitele confidențialității le explic de la început, atât adolescentului, cât și părinților.",
+        "icoana": "frunza"
+      }
+    ],
+    "link": "Vezi detaliile despre servicii"
+  },
+  "cabinetOnline": {
+    "titlu": "În cabinet sau online",
+    "paragrafe": [
+      "Toate întâlnirile pot avea loc în cabinet sau online. Putem discuta împreună ce variantă ți se potrivește.",
+      "Pentru întâlnirile online ai nevoie de un loc liniștit și privat."
+    ]
   },
   "articole": {
     "titlu": "Din articole",
-    "intro": "Gânduri despre emoții, relații și schimbare."
+    "intro": "Texte scurte despre emoții, relații și schimbare."
   },
   "final": {
     "titlu": "Uneori, schimbarea începe cu o conversație.",
-    "text": "Primul pas este o discuție gratuită de 15 minute, la telefon. Îmi spui pe scurt ce te aduce și vedem împreună dacă sunt omul potrivit pentru tine."
+    "paragrafe": [
+      "Discuția inițială este gratuită, are loc la telefon și durează aproximativ 15 minute. Îmi spui pe scurt ce te aduce, îți pun câteva întrebări și îți explic cum lucrez. Apoi vedem împreună dacă are sens să continuăm.",
+      "Dacă îmi dau seama că ți s-ar potrivi mai bine alt tip de sprijin, îți spun deschis și te îndrum, pe cât posibil."
+    ]
   }
 }

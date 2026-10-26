@@ -106,7 +106,6 @@ content:
       - { name: linkedin, label: Link LinkedIn, type: string }
       - { name: googleAnalyticsId, label: Cod Google Analytics (G-...), type: string }
       - { name: butonProgramare, label: Textul butonului principal, type: string }
-      - { name: citat, label: Citatul de pe prima pagină, type: text }
       - { name: mesajWhatsapp, label: Mesaj precompletat pe WhatsApp, type: string }
 
   - name: acasa
@@ -115,8 +114,11 @@ content:
     path: src/_data/acasa.json
     format: json
     fields:
+      - { name: eticheta, label: Eticheta de deasupra titlului, type: string }
       - { name: titlu, label: Titlul mare, type: string }
-      - { name: subtitlu, label: Fraza de sub titlu, type: text }
+      - { name: subtitlu, label: Introducerea, type: text }
+      - { name: prezentare, label: Prezentarea profesională, type: text }
+      - { name: butonSecundar, label: Textul butonului secundar, type: string }
       - name: repere
         label: Repere
         type: object
@@ -137,7 +139,7 @@ content:
               - { name: titlu, label: Titlu, type: string }
               - { name: puncte, label: Puncte, type: text, list: true }
           - name: terapia
-            label: Ce poate aduce terapia
+            label: Ce putem explora împreună
             type: object
             fields:
               - { name: titlu, label: Titlu, type: string }
@@ -148,6 +150,25 @@ content:
         fields:
           - { name: titlu, label: Titlu, type: string }
           - { name: intro, label: Introducere, type: text }
+          - name: carduri
+            label: Servicii
+            type: object
+            list: true
+            fields:
+              - { name: titlu, label: Titlu, type: string }
+              - { name: text, label: Text, type: text }
+              - name: icoana
+                label: Pictogramă
+                type: select
+                options:
+                  values: [persoana, cuplu, familie, frunza]
+          - { name: link, label: Textul linkului, type: string }
+      - name: cabinetOnline
+        label: În cabinet sau online
+        type: object
+        fields:
+          - { name: titlu, label: Titlu, type: string }
+          - { name: paragrafe, label: Paragrafe, type: text, list: true }
       - name: articole
         label: Secțiunea Articole
         type: object
@@ -155,11 +176,11 @@ content:
           - { name: titlu, label: Titlu, type: string }
           - { name: intro, label: Introducere, type: text }
       - name: final
-        label: Finalul paginii
+        label: Invitația de la final (apare pe mai multe pagini)
         type: object
         fields:
           - { name: titlu, label: Titlu, type: string }
-          - { name: text, label: Text, type: text }
+          - { name: paragrafe, label: Paragrafe, type: text, list: true }
 
   - name: despre
     label: Despre mine (text)

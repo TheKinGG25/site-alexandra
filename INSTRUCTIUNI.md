@@ -28,7 +28,7 @@ Pentru curiozitate, iată unde stau lucrurile:
 | --- | --- |
 | Articolele | `src/articole/` (câte un fișier pentru fiecare articol) |
 | Prețurile și regulile de plată | `src/_data/tarife.json` |
-| Date de contact, citatul, codul Google Analytics | `src/_data/site.json` |
+| Date de contact, codul Google Analytics | `src/_data/site.json` |
 | Textele de pe pagina Acasă | `src/_data/acasa.json` |
 | Serviciile și temele | `src/_data/servicii.json` |
 | Întrebările frecvente | `src/_data/intrebari.json` |
@@ -156,7 +156,6 @@ Data viitoare intri direct pe [app.pagescms.org](https://app.pagescms.org) și e
 | Ce vrei să schimbi | Unde în Pages CMS |
 | --- | --- |
 | Telefonul, e-mailul, adresa, programul | Date de contact și setări |
-| Citatul de pe prima pagină | Date de contact și setări > Citatul de pe prima pagină |
 | Textul butonului principal | Date de contact și setări |
 | Titlul mare, listele, finalul paginii Acasă | Pagina Acasă |
 | Textul „Despre mine” | Despre mine (text) |
@@ -207,7 +206,6 @@ Site-ul are deja bannerul de acord pentru cookie-uri. Bannerul apare și statist
 
 - [ ] **CUI-ul** cabinetului (Pages CMS > Date de contact și setări > CUI)
 - [ ] **Perioadele de păstrare a datelor** din pagina Protecția datelor, după ce le verifici cu cerințele Colegiului (le completez eu, spune-mi doar perioadele)
-- [ ] **Citatul** de pe prima pagină (acum e unul provizoriu)
 - [ ] **Codul Google Analytics**
 - [ ] **Codul poștal** al cabinetului (opțional, ajută la Google)
 - [ ] Primul articol, în locul celui model

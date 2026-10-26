@@ -1,7 +1,9 @@
 <section class="sectiune sectiune--centrat final" aria-labelledby="final-titlu">
   <div class="interior--text">
     <h2 id="final-titlu">{{ acasa.final.titlu }}</h2>
-    <p class="intro">{{ acasa.final.text }}</p>
+    {%- for p in acasa.final.paragrafe %}
+    <p class="intro">{{ p }}</p>
+    {%- endfor %}
     <div class="grup-butoane">
       <a class="buton" href="/contact/">{{ site.butonProgramare }}</a>
     </div>
