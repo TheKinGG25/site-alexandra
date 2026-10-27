@@ -1,0 +1,31 @@
+{
+  "titlu": "În caz de urgență",
+  "text": "Psihoterapia nu este un serviciu de urgență. Dacă tu sau altcineva sunteți în pericol imediat, sună la 112 sau mergi la cea mai apropiată unitate de primiri urgențe.",
+  "intro": "Dacă îți este foarte greu chiar acum, poți suna și la:",
+  "linii": [
+    {
+      "nume": "Telefonul Antisuicid",
+      "numar": "0800 801 200",
+      "link": "0800801200",
+      "detalii": "gratuit, vineri până duminică, 19:00 - 07:00"
+    },
+    {
+      "nume": "Abuz, neglijare sau violență asupra unui copil",
+      "numar": "119",
+      "link": "119",
+      "detalii": "gratuit, non-stop"
+    },
+    {
+      "nume": "Violență domestică",
+      "numar": "0800 500 333",
+      "link": "0800500333",
+      "detalii": "gratuit, non-stop"
+    },
+    {
+      "nume": "Pericol imediat",
+      "numar": "112",
+      "link": "112",
+      "detalii": "non-stop"
+    }
+  ]
+}

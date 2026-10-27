@@ -162,6 +162,9 @@ Data viitoare intri direct pe [app.pagescms.org](https://app.pagescms.org) și e
 | Formarea și valorile | Despre mine (formare și valori) |
 | Descrierea serviciilor și temele | Servicii și teme |
 | Întrebările frecvente | Întrebări frecvente |
+| Numerele de urgență de pe pagina Contact | Linii de urgență (pagina Contact) |
+| Exercițiul „Respiră cu mine” | Pagina Acasă > Respiră cu mine |
+| Pașii „Cum începem” | Pagina Acasă > Invitația de la final |
 | Regulile de plată și anulare | Tarife și reguli > Reguli de plată și anulare |
 
 După **Save**, schimbarea apare pe site în 1-2 minute. Dacă nu o vezi, reîncarcă pagina (pe telefon, trage în jos).
@@ -209,6 +212,7 @@ Site-ul are deja bannerul de acord pentru cookie-uri. Bannerul apare și statist
 - [ ] **Codul Google Analytics**
 - [ ] **Codul poștal** al cabinetului (opțional, ajută la Google)
 - [ ] Primul articol, în locul celui model
+- [ ] **Numerele și programul liniilor de urgență** de pe pagina Contact, verificate înainte de publicare (Pages CMS > Linii de urgență)
 
 ---
 

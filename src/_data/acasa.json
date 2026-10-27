@@ -5,10 +5,22 @@
   "prezentare": "Sunt Alexandra Pisaru, psiholog clinician și psihoterapeut, cu formare de bază în psihoterapie integrativă.",
   "butonSecundar": "Află cum lucrez",
   "repere": [
-    { "titlu": "Discuție inițială gratuită", "text": "aproximativ 15 minute, la telefon" },
-    { "titlu": "În cabinet sau online", "text": "toate serviciile, în ambele formate" },
-    { "titlu": "Adulți, cupluri și familii", "text": "și adolescenți de la 12 ani" },
-    { "titlu": "În ritmul tău", "text": "un cadru atent, fără grabă" }
+    {
+      "titlu": "Discuție inițială gratuită",
+      "text": "aproximativ 15 minute, la telefon"
+    },
+    {
+      "titlu": "În cabinet sau online",
+      "text": "toate serviciile, în ambele formate"
+    },
+    {
+      "titlu": "Adulți, cupluri și familii",
+      "text": "și adolescenți de la 12 ani"
+    },
+    {
+      "titlu": "În ritmul tău",
+      "text": "un cadru atent, fără grabă"
+    }
   ],
   "regasesti": {
     "titlu": "Poate te regăsești aici",
@@ -35,6 +47,13 @@
         "Ce te-ar putea ajuta să nu mai simți că duci totul pe cont propriu."
       ]
     }
+  },
+  "respira": {
+    "eticheta": "Un minut doar pentru tine",
+    "titlu": "Respiră cu mine",
+    "text": "Urmărește cercul: se mărește când inspiri și se micșorează când expiri. Exercițiul durează un minut și te poți opri oricând.",
+    "nota": "Dacă respirația ritmată îți creează disconfort, oprește-te și respiră natural.",
+    "final": "Cum te simți acum?"
   },
   "servicii": {
     "titlu": "Cum te pot sprijini",
@@ -76,9 +95,20 @@
   },
   "final": {
     "titlu": "Uneori, schimbarea începe cu o conversație.",
-    "paragrafe": [
-      "Discuția inițială este gratuită, are loc la telefon și durează aproximativ 15 minute. Îmi spui pe scurt ce te aduce, îți pun câteva întrebări și îți explic cum lucrez. Apoi vedem împreună dacă are sens să continuăm.",
-      "Dacă îmi dau seama că ți s-ar potrivi mai bine alt tip de sprijin, îți spun deschis și te îndrum, pe cât posibil."
-    ]
+    "pasi": [
+      {
+        "titlu": "Mă contactezi",
+        "text": "Mă suni sau îmi scrii pe WhatsApp ori pe e-mail. Nu e nevoie să intri în detalii."
+      },
+      {
+        "titlu": "Vorbim aproximativ 15 minute",
+        "text": "Discuția inițială este gratuită și are loc la telefon. Îmi spui pe scurt ce te aduce, îți pun câteva întrebări și îți explic cum lucrez."
+      },
+      {
+        "titlu": "Stabilim pașii următori",
+        "text": "Vedem împreună dacă are sens să continuăm. Dacă îmi dau seama că ți s-ar potrivi mai bine alt tip de sprijin, îți spun deschis și te îndrum, pe cât posibil."
+      }
+    ],
+    "eticheta": "Cum începem"
   }
 }

@@ -144,6 +144,15 @@ content:
             fields:
               - { name: titlu, label: Titlu, type: string }
               - { name: puncte, label: Puncte, type: text, list: true }
+      - name: respira
+        label: Respiră cu mine
+        type: object
+        fields:
+          - { name: eticheta, label: Etichetă, type: string }
+          - { name: titlu, label: Titlu, type: string }
+          - { name: text, label: Text, type: text }
+          - { name: nota, label: Notă de siguranță, type: text }
+          - { name: final, label: Mesajul de la final, type: string }
       - name: servicii
         label: Secțiunea Servicii
         type: object
@@ -179,8 +188,15 @@ content:
         label: Invitația de la final (apare pe mai multe pagini)
         type: object
         fields:
+          - { name: eticheta, label: Etichetă, type: string }
           - { name: titlu, label: Titlu, type: string }
-          - { name: paragrafe, label: Paragrafe, type: text, list: true }
+          - name: pasi
+            label: Pași
+            type: object
+            list: true
+            fields:
+              - { name: titlu, label: Titlu, type: string }
+              - { name: text, label: Text, type: text }
 
   - name: despre
     label: Despre mine (text)
@@ -237,6 +253,25 @@ content:
         fields:
           - { name: grupa, label: Grupa, type: string }
           - { name: teme, label: Teme, type: string, list: true }
+
+  - name: urgente
+    label: Linii de urgență (pagina Contact)
+    type: file
+    path: src/_data/urgente.json
+    format: json
+    fields:
+      - { name: titlu, label: Titlu, type: string }
+      - { name: text, label: Text, type: text }
+      - { name: intro, label: Introducere, type: text }
+      - name: linii
+        label: Linii
+        type: object
+        list: true
+        fields:
+          - { name: nume, label: Denumire, type: string }
+          - { name: numar, label: Număr (cum se afișează), type: string }
+          - { name: link, label: Număr pentru apel (fără spații), type: string }
+          - { name: detalii, label: Program și detalii, type: string }
 
   - name: intrebari
     label: Întrebări frecvente

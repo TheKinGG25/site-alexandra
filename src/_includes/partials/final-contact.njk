@@ -1,16 +1,27 @@
-<section class="sectiune sectiune--centrat final" aria-labelledby="final-titlu">
-  <div class="interior--text">
-    <h2 id="final-titlu">{{ acasa.final.titlu }}</h2>
-    {%- for p in acasa.final.paragrafe %}
-    <p class="intro">{{ p }}</p>
-    {%- endfor %}
-    <div class="grup-butoane">
-      <a class="buton" href="/contact/">{{ site.butonProgramare }}</a>
+<section class="sectiune final{% if finalBanda %} sectiune--banda{% endif %}" aria-labelledby="final-titlu">
+  <div class="interior">
+    <div class="sectiune--centrat">
+      {%- if acasa.final.eticheta %}<p class="eticheta">{{ acasa.final.eticheta }}</p>{% endif %}
+      <h2 id="final-titlu">{{ acasa.final.titlu }}</h2>
     </div>
-    <ul class="contact-rapid">
-      <li><a href="tel:{{ site.telefonLink }}">{{ site.telefon }}</a></li>
-      <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-      <li><a href="https://wa.me/{{ site.whatsapp }}?text={{ site.mesajWhatsapp | urlencode }}" rel="noopener">WhatsApp</a></li>
-    </ul>
+    <ol class="pasi">
+      {%- for pas in acasa.final.pasi %}
+      <li class="card pas">
+        <span class="pas__numar" aria-hidden="true">{{ loop.index }}</span>
+        <h3>{{ pas.titlu }}</h3>
+        <p>{{ pas.text }}</p>
+      </li>
+      {%- endfor %}
+    </ol>
+    <div class="sectiune--centrat">
+      <div class="grup-butoane">
+        <a class="buton" href="/contact/">{{ site.butonProgramare }}</a>
+      </div>
+      <ul class="contact-rapid">
+        <li><a href="tel:{{ site.telefonLink }}">{{ site.telefon }}</a></li>
+        <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+        <li><a href="https://wa.me/{{ site.whatsapp }}?text={{ site.mesajWhatsapp | urlencode }}" rel="noopener">WhatsApp</a></li>
+      </ul>
+    </div>
   </div>
 </section>

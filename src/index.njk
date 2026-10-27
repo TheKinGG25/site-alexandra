@@ -58,7 +58,21 @@ description: "Psihoterapie și consiliere în București și online, pentru adul
   </div>
 </section>
 
-<section class="sectiune sectiune--banda" aria-labelledby="servicii">
+<section class="sectiune sectiune--banda sectiune--centrat respira" aria-labelledby="respira-titlu">
+  <div class="interior--text">
+    <p class="eticheta">{{ acasa.respira.eticheta }}</p>
+    <h2 id="respira-titlu">{{ acasa.respira.titlu }}</h2>
+    <p class="intro">{{ acasa.respira.text }}</p>
+    <div class="respira__scena">
+      <div class="respira__cerc" aria-hidden="true"></div>
+      <p class="respira__faza" aria-live="polite" data-final="{{ acasa.respira.final }}"></p>
+    </div>
+    <button type="button" class="buton respira__buton" data-respira hidden>Începe</button>
+    <p class="respira__nota">{{ acasa.respira.nota }}</p>
+  </div>
+</section>
+
+<section class="sectiune" aria-labelledby="servicii">
   <div class="interior">
     <div class="sectiune--centrat">
       <h2 id="servicii">{{ acasa.servicii.titlu }}</h2>
@@ -77,7 +91,7 @@ description: "Psihoterapie și consiliere în București și online, pentru adul
   </div>
 </section>
 
-<section class="sectiune sectiune--centrat" aria-labelledby="cabinet-online">
+<section class="sectiune sectiune--banda sectiune--centrat" aria-labelledby="cabinet-online">
   <div class="interior--text">
     <h2 id="cabinet-online">{{ acasa.cabinetOnline.titlu }}</h2>
     {%- for p in acasa.cabinetOnline.paragrafe %}
@@ -87,7 +101,7 @@ description: "Psihoterapie și consiliere în București și online, pentru adul
 </section>
 
 {%- if collections.articole.length %}
-<section class="sectiune sectiune--banda" aria-labelledby="articole">
+<section class="sectiune" aria-labelledby="articole">
   <div class="interior">
     <div class="sectiune--centrat">
       <p class="eticheta">Articole</p>
@@ -104,4 +118,5 @@ description: "Psihoterapie și consiliere în București și online, pentru adul
 </section>
 {%- endif %}
 
+{%- set finalBanda = true %}
 {% include "partials/final-contact.njk" %}

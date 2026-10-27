@@ -515,3 +515,44 @@ strong { font-weight: 600; color: var(--verde-inchis); }
 .despre__foto .foto { aspect-ratio: 3 / 4; object-position: center; }
 .citat--sub-carduri { margin-top: clamp(3rem, 7vw, 5rem); }
 @media (min-width: 62rem) { .grila-carduri--patru { grid-template-columns: repeat(4, 1fr); } }
+
+/* ---------- Cum începem (pași) ---------- */
+.pasi { list-style: none; margin: 3rem 0 0; padding: 0; display: grid; gap: 1.25rem; counter-reset: none; }
+@media (min-width: 48rem) { .pasi { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; } }
+.pas h3 { margin-bottom: 0.5rem; }
+.pas__numar {
+  display: grid; place-items: center;
+  width: 2.5rem; height: 2.5rem; margin-bottom: 1.25rem;
+  border-radius: 50%; background: var(--salvie-pal); color: var(--verde-inchis);
+  font-family: var(--font-titluri); font-weight: 500; font-size: 1.1rem;
+}
+.sectiune--banda .pas__numar { background: var(--salvie-chenar); }
+.final .grup-butoane { justify-content: center; margin-top: 2.5rem; }
+
+/* ---------- Respiră cu mine ---------- */
+.respira__scena {
+  position: relative; display: grid; place-items: center;
+  width: min(100%, 16rem); aspect-ratio: 1; margin: 2.5rem auto 1.5rem;
+}
+.respira__cerc {
+  width: 100%; height: 100%; border-radius: 50%;
+  background: radial-gradient(circle at 50% 45%, var(--crem) 0%, var(--salvie-chenar) 55%, var(--salvie) 100%);
+  opacity: 0.85;
+  transform: scale(0.55);
+  transition-property: transform;
+  transition-timing-function: ease-in-out;
+}
+.respira__faza {
+  position: absolute; inset: 0; display: grid; place-items: center; margin: 0;
+  font-family: var(--font-titluri); font-weight: 500; font-size: 1.35rem; color: var(--verde-inchis);
+  text-align: center; padding: 1rem;
+}
+.respira__nota { font-size: 0.875rem; margin-top: 1.5rem; }
+@media (prefers-reduced-motion: reduce) {
+  .respira__cerc { transform: scale(0.8) !important; }
+}
+
+/* ---------- Linii de urgență ---------- */
+.urgente { list-style: none; padding: 0; margin: 0; }
+.urgente li { padding: 0.6rem 0; border-top: 1px solid var(--salvie-pal); }
+.urgente a { white-space: nowrap; }

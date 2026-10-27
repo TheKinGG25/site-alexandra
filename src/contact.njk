@@ -60,8 +60,14 @@ permalink: /contact/
 <section class="sectiune" aria-labelledby="urgente">
   <div class="interior--text">
     <div class="atentie" role="note">
-      <h2 id="urgente" class="titlu-mic">În caz de urgență</h2>
-      <p>Psihoterapia nu este un serviciu de urgență. Dacă tu sau altcineva sunteți în pericol imediat, sună la <a href="tel:112"><strong>112</strong></a> sau mergi la cea mai apropiată unitate de primiri urgențe.</p>
+      <h2 id="urgente" class="titlu-mic">{{ urgente.titlu }}</h2>
+      <p>{{ urgente.text }}</p>
+      <p>{{ urgente.intro }}</p>
+      <ul class="urgente">
+        {%- for l in urgente.linii %}
+        <li><span>{{ l.nume }}:</span> <a href="tel:{{ l.link }}"><strong>{{ l.numar }}</strong></a>, {{ l.detalii }}</li>
+        {%- endfor %}
+      </ul>
     </div>
   </div>
 </section>
