@@ -556,3 +556,4 @@ strong { font-weight: 600; color: var(--verde-inchis); }
 .urgente { list-style: none; padding: 0; margin: 0; }
 .urgente li { padding: 0.6rem 0; border-top: 1px solid var(--salvie-pal); }
 .urgente a { white-space: nowrap; }
+.formare-in-curs { margin-top: 1.25rem; }

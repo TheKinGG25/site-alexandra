@@ -22,6 +22,9 @@ layout: layouts/base.njk
         <li><strong>{{ f.titlu }}</strong>{% if f.detalii %}{{ f.detalii }}{% endif %}</li>
         {%- endfor %}
       </ul>
+      {%- if formare.inCurs %}
+      <p class="formare-in-curs">{{ formare.inCurs }}</p>
+      {%- endif %}
     </div>
   </div>
 </section>
@@ -46,7 +49,5 @@ layout: layouts/base.njk
     {%- endif %}
   </div>
 </section>
-
-
 
 {% include "partials/final-contact.njk" %}

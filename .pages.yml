@@ -231,6 +231,7 @@ content:
         fields:
           - { name: titlu, label: Titlu, type: string }
           - { name: detalii, label: Detalii, type: text }
+      - { name: inCurs, label: Formare în curs (rând separat), type: text }
 
   - name: servicii
     label: Servicii și teme

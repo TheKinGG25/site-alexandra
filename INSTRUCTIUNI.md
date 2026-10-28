@@ -212,6 +212,7 @@ Site-ul are deja bannerul de acord pentru cookie-uri. Bannerul apare și statist
 - [ ] **Codul Google Analytics**
 - [ ] **Codul poștal** al cabinetului (opțional, ajută la Google)
 - [ ] Primul articol, în locul celui model
+- [ ] **Atestatul în psihoterapie**, adăugat pe pagina Despre mine, la Formare, cu formularea exactă din registru
 - [ ] **Numerele și programul liniilor de urgență** de pe pagina Contact, verificate înainte de publicare (Pages CMS > Linii de urgență)
 
 ---
