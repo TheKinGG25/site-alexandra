@@ -208,7 +208,26 @@ content:
       - { name: description, label: Descriere pentru Google, type: text }
       - { name: permalink, label: Adresă (nu modifica), type: string, hidden: true }
       - { name: salut, label: Titlul mare, type: string }
-      - { name: body, label: Text, type: rich-text }
+      - { name: body, label: Introducere, type: rich-text }
+      - name: drum
+        label: Cum am ajuns aici
+        type: object
+        fields:
+          - { name: titlu, label: Titlu, type: string }
+          - { name: paragrafe, label: Paragrafe, type: text, list: true }
+      - name: lucru
+        label: Cum lucrez
+        type: object
+        fields:
+          - { name: titlu, label: Titlu, type: string }
+          - { name: introducere, label: Fraza de deschidere (stânga), type: text }
+          - { name: paragrafe, label: Paragrafe (dreapta), type: text, list: true }
+      - name: citat
+        label: Citat
+        type: object
+        fields:
+          - { name: text, label: Text (fără ghilimele), type: text }
+          - { name: autor, label: Autor, type: string }
 
   - name: formare
     label: Despre mine (formare și valori)

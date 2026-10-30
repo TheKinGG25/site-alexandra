@@ -368,12 +368,11 @@ strong { font-weight: 600; color: var(--verde-inchis); }
 .text-lung > :first-child { margin-top: 0; }
 
 /* Despre mine */
-.despre__grila { display: grid; gap: 3rem; align-items: start; }
+.despre__grila { display: grid; gap: 2.5rem; align-items: center; }
 @media (min-width: 56rem) {
-  .despre__grila { grid-template-columns: 1fr 1.4fr; gap: 5rem; }
-  .despre__foto { position: sticky; top: 7rem; }
+  .despre__grila { grid-template-columns: 0.9fr 1.2fr; gap: 4.5rem; }
 }
-.despre__foto figure { margin: 0; }
+.despre__foto { margin: 0; }
 
 .lista-formare { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--salvie-chenar); }
 .lista-formare li { padding: 1.25rem 0; border-bottom: 1px solid var(--salvie-chenar); }
@@ -557,3 +556,13 @@ strong { font-weight: 600; color: var(--verde-inchis); }
 .urgente li { padding: 0.6rem 0; border-top: 1px solid var(--salvie-pal); }
 .urgente a { white-space: nowrap; }
 .formare-in-curs { margin-top: 1.25rem; }
+
+/* Despre mine: rânduri cu titlul în stânga și textul în dreapta */
+.rand-despre { display: grid; gap: 0; padding-block: 2.5rem; border-top: 1px solid var(--salvie-chenar); }
+.rand-despre h2 { font-size: clamp(1.5rem, 3.5vw, 2rem); margin: 0 0 1rem; }
+.rand-despre p:last-child { margin-bottom: 0; }
+@media (min-width: 56rem) {
+  .rand-despre { grid-template-columns: 1fr 1.6fr; gap: 4rem; padding-block: 3.5rem; }
+  .rand-despre > div:last-child { max-width: 44rem; }
+}
+.citat__text--lung { font-size: clamp(1.25rem, 3vw, 1.75rem) !important; }
