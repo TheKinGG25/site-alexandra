@@ -3,28 +3,28 @@
   "valori": [
     {
       "titlu": "Respect",
-      "text": "Pentru povestea ta, pentru ritmul tău și pentru alegerile tale. Tu știi cel mai bine cum e să trăiești viața ta."
+      "text": "Ținem cont de ritmul tău. Nu te grăbesc spre concluzii și nu îți spun ce ar trebui să simți."
     },
     {
       "titlu": "Empatie",
-      "text": "Încerc să înțeleg ce trăiești din locul tău, nu din al meu, fără grabă și fără judecată."
+      "text": "Încerc să înțeleg ce trăiești din locul tău, cu întrebări, nu cu etichete."
     },
     {
       "titlu": "Confidențialitate",
-      "text": "Ce îmi spui rămâne între noi. Excepțiile sunt doar cele prevăzute de lege, când viața cuiva este în pericol."
+      "text": "Ce discutăm rămâne confidențial, în limitele profesionale și legale. Ți le explic de la prima întâlnire, ca să știi exact cum stau lucrurile."
     },
     {
       "titlu": "Profesionalism",
-      "text": "Lucrez după Codul deontologic al profesiei de psiholog și continui să învăț, prin cursuri și formări noi."
+      "text": "Respect Codul deontologic al profesiei și continui să învăț."
     }
   ],
   "lista": [
     {
-      "titlu": "Psiholog clinician atestat",
-      "detalii": "Colegiul Psihologilor din România, psihologie clinică, din 2023. Cod RUP 31147."
+      "titlu": "Psiholog clinician",
+      "detalii": "Colegiul Psihologilor din România, din 2023. Cod RUP 31147."
     },
     {
-      "titlu": "Formare în psihoterapie integrativă",
+      "titlu": "Formare de bază în psihoterapie integrativă",
       "detalii": "Asociația de Psihodiagnoză, Consiliere și Psihoterapie Integrativă Aplicată, acreditată de Colegiul Psihologilor din România."
     },
     {
@@ -32,12 +32,9 @@
       "detalii": "Universitatea Spiru Haret."
     },
     {
-      "titlu": "În curs: formare în lucrul cu sexualitatea",
-      "detalii": ""
-    },
-    {
-      "titlu": "Cursuri de specializare",
+      "titlu": "Cursuri",
       "detalii": "Doliu; psihodiagnoza anxietății și a depresiei; mindfulness adaptat la traumă; evaluarea tulburărilor de personalitate."
     }
-  ]
+  ],
+  "inCurs": "În prezent urmez o formare complementară în intimitate și sexualitate."
 }

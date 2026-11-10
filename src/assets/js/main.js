@@ -97,4 +97,45 @@
       });
     });
   }
+
+  // ---------- Respiră cu mine ----------
+  // Inspir 4 secunde, expir 6 secunde, timp de un minut.
+  var butonRespira = document.querySelector("[data-respira]");
+  if (butonRespira) {
+    var cerc = document.querySelector(".respira__cerc");
+    var faza = document.querySelector(".respira__faza");
+    var FAZE = [
+      { text: "Inspiră", durata: 4000, scara: 1 },
+      { text: "Expiră", durata: 6000, scara: 0.55 }
+    ];
+    var CICLURI = 6;
+    var temporizator = null;
+    var activ = false;
+
+    var opreste = function (mesaj) {
+      clearTimeout(temporizator);
+      activ = false;
+      cerc.style.transitionDuration = "1500ms";
+      cerc.style.transform = "scale(0.55)";
+      faza.textContent = mesaj || "";
+      butonRespira.textContent = "Începe";
+    };
+
+    var pas = function (index) {
+      if (index >= CICLURI * FAZE.length) { opreste(faza.getAttribute("data-final")); return; }
+      var f = FAZE[index % FAZE.length];
+      cerc.style.transitionDuration = f.durata + "ms";
+      cerc.style.transform = "scale(" + f.scara + ")";
+      faza.textContent = f.text;
+      temporizator = setTimeout(function () { pas(index + 1); }, f.durata);
+    };
+
+    butonRespira.hidden = false;
+    butonRespira.addEventListener("click", function () {
+      if (activ) { opreste(); return; }
+      activ = true;
+      butonRespira.textContent = "Oprește";
+      pas(0);
+    });
+  }
 })();
